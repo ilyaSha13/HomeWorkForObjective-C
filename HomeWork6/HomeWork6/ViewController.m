@@ -52,6 +52,8 @@
     
     [self.button addTarget:self action:@selector(loaderTextView) forControlEvents:UIControlEventTouchUpInside];
     
+    [self.clearTextView addTarget:self action:@selector(clearTextV) forControlEvents:UIControlEventTouchUpInside];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -66,13 +68,15 @@
     
 }
 
-- (void)resetDefaults {
-    NSDictionary *dict = [self.userDefaults dictionaryRepresentation];
-    for (id key in dict) {
-        [self.userDefaults removeObjectForKey:key];
-        
-    }
-    [self.userDefaults synchronize];
+- (void) clearTextV {
+//    NSDictionary *dict = [self.userDefaults dictionaryRepresentation];
+//    for (id key in dict) {
+//        [self.userDefaults removeObjectForKey:key];
+//        
+//    }
+//    [self.userDefaults synchronize];
+    
+    self.textView.text = @"";
 }
 
 -(void) loaderTextView {
@@ -81,7 +85,7 @@
     
     [self.userDefaults setObject:str forKey:@"strKey"];
     
-    self.textView.text = str;
+    //self.textView.text = str;
     
     //[self resetDefaults];
 }

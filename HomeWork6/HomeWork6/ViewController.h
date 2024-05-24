@@ -17,6 +17,8 @@
 
 @property(nonatomic, strong) NSUserDefaults *userDefaults;
 
+@property (weak, nonatomic) IBOutlet UIButton *clearTextView;
+
 -(void) resetDefaults;
 
 @end

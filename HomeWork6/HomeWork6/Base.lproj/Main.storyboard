@@ -32,14 +32,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rme-jP-C58">
-                                <rect key="frame" x="118" y="203" width="159" height="35"/>
+                                <rect key="frame" x="114" y="203" width="168" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.86686705590000002" green="0.88150376080000004" blue="0.68873950149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Вывод в textView"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Сохранить строку"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1ed-6k-fcR">
-                                <rect key="frame" x="80" y="296" width="240" height="303"/>
+                                <rect key="frame" x="80" y="296" width="240" height="237"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -63,6 +63,15 @@
                                     <segue destination="IZd-3e-GHb" kind="show" id="vGY-pR-mKM"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHO-r1-XRP">
+                                <rect key="frame" x="120" y="583" width="153" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Очистить вывод">
+                                    <color key="baseForegroundColor" red="0.86686705590000002" green="0.88150376080000004" blue="0.68873950149999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,6 +79,7 @@
                     <navigationItem key="navigationItem" id="qsd-xM-9lj"/>
                     <connections>
                         <outlet property="button" destination="Rme-jP-C58" id="6QL-IB-R1u"/>
+                        <outlet property="clearTextView" destination="DHO-r1-XRP" id="kSF-56-wvQ"/>
                         <outlet property="textField" destination="Rmo-di-fgC" id="EGu-mK-x3n"/>
                         <outlet property="textView" destination="1ed-6k-fcR" id="xne-Pg-sPG"/>
                     </connections>
@@ -178,6 +188,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
