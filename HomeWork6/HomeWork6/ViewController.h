@@ -19,6 +19,8 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *clearTextView;
 
+@property (weak, nonatomic) IBOutlet UIButton *clearCach;
+
 -(void) resetDefaults;
 
 @end

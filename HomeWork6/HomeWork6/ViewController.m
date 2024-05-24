@@ -54,6 +54,10 @@
     
     [self.clearTextView addTarget:self action:@selector(clearTextV) forControlEvents:UIControlEventTouchUpInside];
     
+    [self.clearCach addTarget:self action:@selector(resetDefaults) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -69,14 +73,22 @@
 }
 
 - (void) clearTextV {
-//    NSDictionary *dict = [self.userDefaults dictionaryRepresentation];
-//    for (id key in dict) {
-//        [self.userDefaults removeObjectForKey:key];
-//        
-//    }
-//    [self.userDefaults synchronize];
     
     self.textView.text = @"";
+    
+}
+
+-(void) resetDefaults {
+    
+    NSDictionary *dict = [self.userDefaults dictionaryRepresentation];
+        for (id key in dict) {
+            [self.userDefaults removeObjectForKey:key];
+    
+        }
+    [self.userDefaults synchronize];
+    
+    self.textView.text = @"";
+    
 }
 
 -(void) loaderTextView {
